@@ -1,20 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect} from "react";
+import {TextField, Button} from "@material-ui/core";
 
 function App() {
   const [spots, setSpots] = useState([]);
+  // string temp = "";
+  const handleChange = e => {
+    // temp = e;
+    console.log('Typed => ${e.target.value}')
+  };
+
+
+  function Spot({spot}){
+
+    // const storeChoice = (spot) => {
+      
+    // }
+
+
+    return(
+      <div>
+        {/* <h4>{spot.spot}</h4> */}
+        <h4>Fake News</h4>
+      </div>
+    )
+  }
 
   return (
     <div> 
-      <h1>Study Spots</h1>
+      <h1>HooSpots</h1>
       {spots.map((spot) => (
-        <h3>{spot}</h3>
+        <Spot spot={spot}></Spot>
       ))}
+
+      <TextField spots = {spots} variant="outlined" onChange={handleChange} />
 
       <button
         onClick={() => {
-          setSpots([...spots, "a new spot"]);
+          setSpots([...spots, handleChange]);
         }}
         >
           Button
