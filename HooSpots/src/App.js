@@ -16,7 +16,7 @@ function App() {
         <h3>{spot}</h3>
       ))}
 
-      <TextField value = {value} variant="outlined" onChange={handleChange} />
+      <TextField spots = {spots} variant="outlined" onChange={handleChange} />
 
       <button
         onClick={() => {
