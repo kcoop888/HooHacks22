@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState, useEffect} from "react";
 
 function App() {
-  const spots = ["spot1", "spot2", "spot3"];
+  const [spots, setSpots] = useState([]);
 
   return (
     <div> 
@@ -11,6 +11,14 @@ function App() {
       {spots.map((spot) => (
         <h3>{spot}</h3>
       ))}
+
+      <button
+        onClick={() => {
+          setSpots([...spots, "a new spot"]);
+        }}
+        >
+          Button
+        </button>
     </div>
   );
 }
