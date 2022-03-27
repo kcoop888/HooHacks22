@@ -98,7 +98,8 @@ class App extends Component {
           <Button variant='contained' 
           color='primary' 
           onClick={() => {
-            alert(this.state.spot);
+            // alert(this.state.spot);
+            
             this.setSetSpot(this.state.spot);
           }}
           >
