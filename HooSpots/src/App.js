@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import React, {useState, useEffect, Component} from "react";
+import React, {useState, Component} from "react";
 import {TextField, Button} from "@material-ui/core";
+import Logo from "./uva2.png";
 
 
 
@@ -39,7 +40,7 @@ class App extends Component {
   
 
   spotholder(){
-    const spots = ["hello"];
+    // const spots = ["hello"];
     return(
       <>
         <ul>
@@ -83,8 +84,12 @@ class App extends Component {
 
   render(){
     return (
-      <div> 
+      <div className="App"> 
+      <header className="App-header">
+      <img src={Logo} className="App-logo" alt="logo" />
         <h1>HooSpots</h1>
+        <h2>Where do you like to study?</h2>
+        
         {this.spots.map((sp) => (
           <h3>{sp}</h3>
         ))}
@@ -99,44 +104,17 @@ class App extends Component {
           color='primary' 
           onClick={() => {
             // alert(this.state.spot);
-            
+
             this.setSetSpot(this.state.spot);
           }}
           >
             Send Spot
           </Button>
         </div>
+        </header>
       </div>
     );
-  }
-  }
-  
-
-
-
-
-
-
-
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
-// }
+  }}
 
 export default App;
 
