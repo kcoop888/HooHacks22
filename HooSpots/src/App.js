@@ -99,6 +99,7 @@ class App extends Component {
           color='primary' 
           onClick={() => {
             // alert(this.state.spot);
+            
             this.setSetSpot(this.state.spot);
           }}
           >
